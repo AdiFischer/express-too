@@ -2,13 +2,13 @@ import express from "express"//always
 import people from './data.js'
 const PORT = 3033
 const app = express()//always
-app.use(express.json())//withot this line, line 13 wont work
+app.use(express.json())//without this line, line 13 wont work
 
 app.get('/people', (req, res) => {
     res.send(people)
 })
 
-//make api point that isnt a get
+//make api point that isn't a get
 app.post('/people', (req, res) => {
     const newPerson = req.body
     people.push(newPerson)
